@@ -56,6 +56,9 @@ tell application "System Events" to sleep
 我只写了最基本可以快速使用的部分
 如果需要更多的使用方式，稍后找到链接会给大家贴上去
 ```
+给大神博客打个广告，参考如下：
+[Jenkins+github+fir持续集成iOS项目](https://wangjianjun0730.github.io/2017/10/Jenkins/)
+
 ```
 #!/bin/sh -
 export LANG=en_US.UTF-8

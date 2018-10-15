@@ -59,6 +59,8 @@ tell application "System Events" to sleep
 给大神博客打个广告，参考如下：
 [Jenkins+github+fir持续集成iOS项目](https://wangjianjun0730.github.io/2017/10/Jenkins/)
 
+创建一个文件 `touch shell`, 粘贴如下代码并保存
+
 ```
 #!/bin/sh -
 export LANG=en_US.UTF-8
@@ -104,7 +106,19 @@ echo "=================开始上传================="
 curl -F 'file=@'${CODE_PATH}/${APP_NAME}.ipa'' -F '_api_key= 自己蒲公英帐户的_api_key' https://www.pgyer.com/apiv2/app/upload
 
 ```
-最后存储为可执行的脚本就可以，命令行直接调用或者双击直接运行，存储后如下：
+保存完成后只是一个普通的文本文件，转换成可执行程序需要通过 `chmod` 命令给权限
+
+```
+chmod +x  给权限
+chmod -x 去除执行权限
+```
+在脚本目录下执行
+
+```
+chmod +x shell
+```
+
+得到可执行文件如下：
 
 ![](image/shell.png)
 

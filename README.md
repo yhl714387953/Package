@@ -84,7 +84,10 @@ CODE_SIGN_DISTRIBUTION="iPhone Distribution: Zuiye Company Limited"
 
 # 删除工程文件
 echo "+++++++++删除工程文件+++++++++"
-rm -rf "${TARGET_NAME}.xcarchive"
+rm -rf "${baseDirForScriptSelf}/${TARGET_NAME}.xcarchive"
+rm -rf "${baseDirForScriptSelf}/DistributionSummary.plist"
+rm -rf "${baseDirForScriptSelf}/${TARGET_NAME}.ipa"
+rm -rf "${baseDirForScriptSelf}/Packaging.log"
 
 # 进入工程源码根目录
 cd "${CODE_PATH}"
